@@ -23,6 +23,7 @@ button {
     font-size: 15px;
 }
 
-#buttons {
+.buttons button {
+    display: block;
     width:100%;
 }
