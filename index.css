@@ -19,13 +19,25 @@ body {
     background: linear-gradient(green, rgb(49, 49, 100));
 }
 
+#acc-balance{
+    text-align:right;
+    padding-right: 10%;
+}
+
+#input-box {
+    align-content: center;
+
+}
+
 button {
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .buttons {
     display: block;
+    align-content: center;
     width: 100%;
+    padding-left: 30%;
 }
 
 .table-display {
