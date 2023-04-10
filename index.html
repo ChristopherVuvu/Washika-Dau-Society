@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <h1>Chama Cha Washika Dau</h1>
+    <p id="para1">A deposit and withdrawal society</p>
+    <div class="div1">
+        <h2>Washika Dau</h2>
+        <h2 id="acc-balance">Balance:</h2>
+    </div>
+    <div class="inputBox">
+        <input 
+            type="number"
+            id="input-box"
+            min="0"
+            required
+            placeholder="Input Amount"
+            >
+    </div>
+    <div id="buttons">
+        <button 
+        type="button"
+        class="balance-btn"
+        onclick="display-acc-balance"
+        >Balance</button>
+
+        <button 
+        type="button"
+        class="deposit-btn"
+        onclick="diplay-dpst-trx"
+        >Deposit</button>
+
+        <button 
+        type="button" 
+        class="Withdrawal-btn" 
+        onclick="display-withd-trx"
+        >Withdrawal</button>
+    </div>
+    <div class="table-display">
+        <table class="table-place">
+            <thead>
+                <tr>
+                    <th scope="col">Number</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Type of Transaction</th>
+                    <th scope="col">Available Balance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>1st-Jan-2020</td>
+                    <td>Withdrawal</td>
+                    <td>15000</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
