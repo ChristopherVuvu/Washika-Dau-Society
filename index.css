@@ -23,7 +23,11 @@ button {
     font-size: 15px;
 }
 
-.buttons button {
+.buttons {
     display: block;
-    width:100%;
+    width: 100%;
+}
+
+.table-display {
+    text-align:justify;
 }

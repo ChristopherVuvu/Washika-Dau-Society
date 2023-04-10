@@ -30,6 +30,7 @@ if(amount < 0 || amount === ""){
 document
     .getElementsByClassName('deposit-btn')
     .addEventListener('click', handleDeposit);
+
 //determine the trancation types to done by this function
 let data = {
 date: d,
@@ -121,7 +122,7 @@ fetch(url, {
 //set a function to populate and update a transaction 
 //on the browser once a transcation is done
 function populateTable(){
-    let url: "http://localhost:3000/transaction-history";
+    let url = "http://localhost:3000/transaction-history";
 
     <tr>
         <th scope="row">${doc.id}</th>
@@ -134,13 +135,13 @@ function populateTable(){
     fetch(url), {
         method: "GET",
         headers:{
-            "content-TYpe": "Application/json";
+            "Content-TYpe": "Application/json",
         }
     }
     .then((response)=> response.json())
     .then((data)=> {
         let element = "";
-        for (let doc of data)(){
+        for (let doc of data)()=> {
             element = element+""
         }
     });
