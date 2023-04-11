@@ -3,9 +3,9 @@ let acc_balance = document.getElementById('acc-balance');
 let input = document.getElementById('input-box');
 let prevBalance =0;
 
-document
-    .getElementsByClassName("Withdrawal-btn")
-    .addEventListener('click', handleWithdrawalTransactions);
+//document
+//    .getElementsByClassName("Withdrawal-btn")
+//    .addEventListener('click', handleWithdrawalTransactions);
 
 //setting the fuction on the initial balance value of the account
 function setInitialBalance(){
@@ -27,9 +27,8 @@ if(amount < 0 || amount === ""){
     return;
 }
 
-document
-    .getElementsByClassName('deposit-btn')
-    .addEventListener('click', handleDeposit);
+//document.querySelector(".Withdrawal-btn").addEventListener('click', handleWithdrawalTransactions);
+//document.querySelector('.deposit-btn').addEventListener('click', handleDeposit);
 
 //determine the trancation types to done by this function
 let data = {
@@ -54,6 +53,8 @@ fetch(url, {
     .then((response)=>response.json())
     .then((data)=> {
         console.log(data);
+
+        
         input.value = "";
         updateBalance(parseInt(prevBalance)+parseInt(amount));
         alert(`Amount Deposited`);
@@ -77,6 +78,9 @@ let data = {
     balance: prevBalance
 }
 
+document.querySelector(".Withdrawal-btn").addEventListener('click', handleWithdrawalTransactions);
+document.querySelector('.deposit-btn').addEventListener('click', handleDeposit);
+document.querySelector('.deposit-btn').addEventListener('click', displayDepositTransactions);
 //fetch the withdrawal transactions using POST in Json
 fetch(url, {
     method: "POST",
